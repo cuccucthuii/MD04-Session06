@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: medical-gateway
+  cloud:
+    discovery:
+      enabled: false
+
+eureka:
+  client:
+    enabled: false
