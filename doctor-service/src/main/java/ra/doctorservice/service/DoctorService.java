@@ -8,4 +8,6 @@ public interface DoctorService {
     List<DoctorListItemResponse> findAllForList();
 
     DoctorListItemResponse findById(Long id);
+
+    List<DoctorListItemResponse> searchByName(String query);
 }

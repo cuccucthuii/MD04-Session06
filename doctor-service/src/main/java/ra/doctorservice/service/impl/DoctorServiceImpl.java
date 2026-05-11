@@ -31,4 +31,15 @@ public class DoctorServiceImpl implements DoctorService {
                 .map(doctorMapper::toListItem)
                 .orElseThrow(() -> new DoctorNotFoundException(id));
     }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<DoctorListItemResponse> searchByName(String query) {
+        if (query == null || query.isBlank()) {
+            return List.of();
+        }
+        return doctorRepository.findByNameContainingIgnoreCase(query).stream()
+                .map(doctorMapper::toListItem)
+                .toList();
+    }
 }

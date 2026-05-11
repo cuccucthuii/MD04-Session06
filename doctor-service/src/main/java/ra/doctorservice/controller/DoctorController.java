@@ -1,10 +1,12 @@
 package ra.doctorservice.controller;
 
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import ra.doctorservice.dto.DoctorListItemResponse;
 import ra.doctorservice.service.DoctorService;
@@ -19,6 +21,12 @@ public class DoctorController {
     @GetMapping
     public List<DoctorListItemResponse> list() {
         return doctorService.findAllForList();
+    }
+
+    @GetMapping("/search")
+    @RateLimiter(name = "searchDoctorLimit")
+    public List<DoctorListItemResponse> search(@RequestParam("q") String q) {
+        return doctorService.searchByName(q);
     }
 
     @GetMapping("/{id}")

@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/appointment-service" />
+    <file type="web" url="file://$PROJECT_DIR$/doctor-service" />
     <file type="web" url="file://$PROJECT_DIR$/medical-discovery-server" />
     <file type="web" url="file://$PROJECT_DIR$/patient-service" />
   </component>
