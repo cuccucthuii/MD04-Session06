@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Session06.iml" filepath="$PROJECT_DIR$/.idea/Session06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/config-server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/config-server.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/medical-discovery-server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/medical-discovery-server.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/patient-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/patient-service.main.iml" />
     </modules>
   </component>
 </project>
